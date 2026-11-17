@@ -10,7 +10,7 @@ function isInteger(n) {
  * Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
  */
 function even() {
-    return [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    return [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 }
 
 /**
@@ -18,6 +18,7 @@ function even() {
  * @param {*} n
  */
 function sumTo(n) {
+    if (!Number.isInteger(n) || n < 0) return undefined;
     let sum = 0;
     for (let i = 1; i <= n; i++) {
         sum += i;
@@ -30,6 +31,7 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
+    if (!Number.isInteger(n) || n < 0) return undefined;
     if (n <= 1) return n;
     return n + recSumTo(n - 1);
 }
@@ -39,6 +41,7 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
+    if (!Number.isInteger(n) || n < 0) return undefined;
     let result = 1;
     for (let i = 2; i <= n; i++) {
         result *= i;
