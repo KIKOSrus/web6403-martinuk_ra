@@ -62,7 +62,8 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
-    if (n < 1) return 0;
+    if (!Number.isInteger(n) || n < 0) return undefined;
+    if (n === 0) return 0;
     if (n === 1) return 1;
     let a = 0, b = 1;
     for (let i = 2; i <= n; i++) {
@@ -72,7 +73,6 @@ function fibonacci(n) {
     }
     return b;
 }
-
 /** Напишите функцию, которая принимает начальное значение и функцию операции
  * и возвращает функцию - выполняющую эту операцию.
  * Если функция операции (operatorFn) не задана - по умолчанию всегда
