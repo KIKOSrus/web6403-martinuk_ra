@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предложить рофл</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="beg">Добро пожаловать! Кто-то уже бежит.</div>
+
+    <header class="header">
+        <h1>Предложить рофл</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">Мемы</a>
+        <a href="albums.html">Прикольные альбомы</a>
+        <a href="anekdoty.html">Анекдоты</a>
+        <a href="top.html">Топ рофлов</a>
+        <a href="feedback.html" class="active">Предложить рофл</a>
+    </nav>
+
+    <main class="container">
+        <div class="container-inner">
+                        <form class="form" id="roflForm" action="#" method="post">
+
+                <label class="form-label" for="nick">Твой ник</label>
+                <input class="form-field" type="text" id="nick" name="nick" placeholder="поздняк" required minlength="2">
+
+                <label class="form-label" for="email">Почта</label>
+                <input class="form-field" type="email" id="email" name="email" placeholder="rofl@example.com" required>
+
+                <label class="form-label" for="text">Сам рофл</label>
+                <textarea class="form-field" id="text" name="text" rows="5" placeholder="Продам гараж..." required></textarea>
+
+                <label class="form-option form-consent">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    Согласен, что меня запишут в историю рофлов
+                </label>
+
+                <button class="form-button" type="submit">Отправить на сервер</button>
+                <p class="form-status" id="status" role="status"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><b>©2026.</b> ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+        <p class="footer-small">он просто бежит. не спрашивайте.</p>
+    </footer>
+
+    <div class="dots" aria-hidden="true"></div>
+    <img class="runner" src="../img/friend.jpg" alt="" aria-hidden="true">
+    <script src="js/submission.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
